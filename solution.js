@@ -58,14 +58,14 @@ console.log(sumArray([34, 56, 7]));
 // * 5. Define a function, as a function declaration, `multiplyArray` that takes an array of numbers and returns the product those numbers. For example, `multiplyArray([2, 4, 5]);` would return `40`.
 // ? function declaration that takes array as parameters
 function multiplyArray(arr) {
-    // ? initializing a variable to be the total sum of the array
-  let total= 1;
-  // ?looping thru the aray 
+  // ? initializing a variable to be the total sum of the array
+  let total = 1;
+  // ?looping thru the aray
   for (let i = 0; i < arr.length; i++) {
     // ? as its looping its multiplying the indexes of array and putting them in the total variable
     total *= arr[i];
   }
-// ?return the total vaiable once the looping is over 
+  // ?return the total vaiable once the looping is over
   return total;
 }
 
@@ -73,10 +73,26 @@ console.log(multiplyArray([4, 7, 2]));
 
 // * 6. Define a function, as a function expression, `numArgs` that returns the number of arguments passed to the function when called.
 
-// ? function expression that takes 3 arguments 
-const numArg = function(num1,num2,num3){
-    // ? when setting .length to anythin it will retunr the nmber of arguments, inside a array,object,arguments 
-          return numArg.length
-    }
+// ? function expression that takes 3 arguments
+const numArg = function (num1, num2, num3) {
+  // ? when setting .length to anythin it will retunr the nmber of arguments, inside a array,object,arguments
+  return numArg.length;
+};
+
+console.log(numArg());
+
+// * 7. Define a function, as a function declaration, `reverseString` that takes a string, reverses the characters, and returns it. For example, `reverseString('rockstar');` would return the string "ratskcor".
+
+function reverseString(str) {
+    // ? always need fi there is something new taht comes out it needs to be put in a new variable 
+
+    let newString = "";
+
+    // ?  i its set to be the whole lenght og the str and then it takes out one to start counding from the last character , it will keep going until it reaches the last character of the str, and I11 will finish the last missing character 
     
-    console.log(numArg());
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+console.log(reverseString('hello'));
