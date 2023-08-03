@@ -56,14 +56,16 @@ const sumArray = function (arr) {
 console.log(sumArray([34, 56, 7]));
 
 // * 5. Define a function, as a function declaration, `multiplyArray` that takes an array of numbers and returns the product those numbers. For example, `multiplyArray([2, 4, 5]);` would return `40`.
-//function declaration that takes array as parameters
+// ? function declaration that takes array as parameters
 function multiplyArray(arr) {
-    //initializing a variable to be the total sum of the array
+    // ? initializing a variable to be the total sum of the array
   let total= 1;
+  // ?looping thru the aray 
   for (let i = 0; i < arr.length; i++) {
+    // ? as its looping its multiplying the indexes of array and putting them in the total variable
     total *= arr[i];
   }
-
+// ?return the total vaiable once the looping is over 
   return total;
 }
 
