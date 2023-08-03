@@ -84,15 +84,30 @@ console.log(numArg());
 // * 7. Define a function, as a function declaration, `reverseString` that takes a string, reverses the characters, and returns it. For example, `reverseString('rockstar');` would return the string "ratskcor".
 
 function reverseString(str) {
-    // ? always need fi there is something new taht comes out it needs to be put in a new variable 
+  // ? always need fi there is something new taht comes out it needs to be put in a new variable
 
-    let newString = "";
+  let newString = "";
 
-    // ?  i its set to be the whole lenght og the str and then it takes out one to start counding from the last character , it will keep going until it reaches the last character of the str, and I11 will finish the last missing character 
-    
-    for (let i = str.length - 1; i >= 0; i--) {
-        newString += str[i];
-    }
-    return newString;
+  // ?  i its set to be the whole lenght og the str and then it takes out one to start counding from the last character , it will keep going until it reaches the last character of the str, and I11 will finish the last missing character
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    newString += str[i];
+  }
+  return newString;
 }
-console.log(reverseString('hello'));
+console.log(reverseString("hello"));
+
+// * 8. Define a function, as a function expression, `longestStringInArray` that takes an array of strings as an argument and returns the length of the longest string.
+
+const longestStringInArray = function (arrStr) {
+    // ? creating a variable that will hold the value of the longest string
+  let longest= 0;
+  for (let i = 0; i < arrStr.length; i++) {
+    if (arrStr[i].length > longest) {
+      longest = arrStr[i].length;
+    }
+  }
+  return longest;
+};
+
+console.log(longestStringInArray(["bob", "cat", "Bananana"]));
