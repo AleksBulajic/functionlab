@@ -111,3 +111,27 @@ const longestStringInArray = function (arrStr) {
 };
 
 console.log(longestStringInArray(["bob", "cat", "Bananana"]));
+
+
+//*  9. Define a function, as a function declaration, stringsLongerThan that takes an array of strings and a number as arguments; and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
+
+
+function stringsLongerThan(arr, num) {
+    // ? Create an empty array to store the strings that are longer than 'num'
+    let result = [];
+  
+    // ? Loop through each element in the 'arr' array
+    for (let i = 0; i < arr.length; i++) {
+      // ? Check if the length of the current string (arr[i]) is greater than 'num'
+      if (arr[i].length > num) {
+        // ? If the length is greater, add the current string to the 'result' array
+        result.push(arr[i]);
+      }
+    }
+  
+    // ? After looping through all the elements in 'arr', return the 'result' array
+    return result;
+  }
+  
+
+console.log(stringsLongerThan(["bob", "mark", "cat", "aleks"], 4))
