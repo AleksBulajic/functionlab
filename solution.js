@@ -70,3 +70,13 @@ function multiplyArray(arr) {
 }
 
 console.log(multiplyArray([4, 7, 2]));
+
+// * 6. Define a function, as a function expression, `numArgs` that returns the number of arguments passed to the function when called.
+
+// ? function expression that takes 3 arguments 
+const numArg = function(num1,num2,num3){
+    // ? when setting .length to anythin it will retunr the nmber of arguments, inside a array,object,arguments 
+          return numArg.length
+    }
+    
+    console.log(numArg());
