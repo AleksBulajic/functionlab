@@ -135,3 +135,20 @@ function stringsLongerThan(arr, num) {
   
 
 console.log(stringsLongerThan(["bob", "mark", "cat", "aleks"], 4))
+
+
+
+// * Write a JavaScript function that reverses a number.
+
+// Example x = 32243;
+// Expected Output : 34223
+
+function reverseNumber(number) {
+  //? to reverse something that is not astring first we make it into a strint toString() and then we can split, revere,join
+  const reversedString = number.toString().split('').reverse().join('');
+  //? parsenInt take that string and sents it back to an integer with 10 as a base decimal
+  const reversedNumber = parseInt(reversedString, 10);
+  return reversedNumber;
+}
+
+console.log(reverseNumber(345));
