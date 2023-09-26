@@ -133,6 +133,7 @@ function stringsLongerThan(arr, num) {
     return result;
   }
   
+  
 
 console.log(stringsLongerThan(["bob", "mark", "cat", "aleks"], 4))
 
