@@ -149,24 +149,31 @@ console.log(checkValue());
 
 //*11. Write a JavaScript function which returns the n rows by n columns identity matrix.
 
+// Function to create an n by n identity matrix
 function createIdentityMatrix(n) {
+  // Initialize an empty matrix
   let matrix = [];
-
-  for(let i = 0; i < n;i++){
-    let rows = []
-
-    for(let j = 0; j < n; j++){
-     if(i === j){
-      rows.push(1);
-     }else {
-      rows.push(0)
-     }
-    
-     matrix.push(rows)
+  // Loop through each row of the matrix
+  for (let i = 0; i < n; i++) {
+    // Initialize an empty array for the current row
+    let rows = [];
+    // Loop through each column of the current row
+    for (let j = 0; j < n; j++) {
+      // Check if the current position is on the diagonal
+      if (i === j) {
+        // If on the diagonal, push 1 to the current row
+        rows.push(1);
+      } else {
+        // If not on the diagonal, push 0 to the current row
+        rows.push(0);
+      }
+      // Push the current row to the matrix
+      matrix.push(rows);
     }
-
-    return matrix
+    // Return the matrix (Note: this should be outside the loop)
+    return matrix;
   }
-
 }
-console.log(createIdentityMatrix(4)); 
+
+// Print the result of the function
+console.log(createIdentityMatrix(4));
