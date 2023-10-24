@@ -138,4 +138,17 @@ function stringsLongerThan(arr, num) {
 console.log(stringsLongerThan(["bob", "mark", "cat", "aleks"], 4))
 
 
+// *9. Write a JavaScript function that accepts an argument and returns the type.
+//* Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
+
+function checkValue(argument){
+  return typeof argument
+}
+
+console.log(checkValue({}))
+console.log(checkValue(true))
+console.log(checkValue(function(){}))
+console.log(checkValue(3))
+console.log(checkValue(""))
+console.log(checkValue())
