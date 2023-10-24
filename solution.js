@@ -100,8 +100,8 @@ console.log(reverseString("hello"));
 // * 8. Define a function, as a function expression, `longestStringInArray` that takes an array of strings as an argument and returns the length of the longest string.
 
 const longestStringInArray = function (arrStr) {
-    // ? creating a variable that will hold the value of the longest string
-  let longest= 0;
+  // ? creating a variable that will hold the value of the longest string
+  let longest = 0;
   for (let i = 0; i < arrStr.length; i++) {
     if (arrStr[i].length > longest) {
       longest = arrStr[i].length;
@@ -112,43 +112,61 @@ const longestStringInArray = function (arrStr) {
 
 console.log(longestStringInArray(["bob", "cat", "Bananana"]));
 
-
 //*  9. Define a function, as a function declaration, stringsLongerThan that takes an array of strings and a number as arguments; and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
 
-
 function stringsLongerThan(arr, num) {
-    // ? Create an empty array to store the strings that are longer than 'num'
-    let result = [];
-  
-    // ? Loop through each element in the 'arr' array
-    for (let i = 0; i < arr.length; i++) {
-      // ? Check if the length of the current string (arr[i]) is greater than 'num'
-      if (arr[i].length > num) {
-        // ? If the length is greater, add the current string to the 'result' array
-        result.push(arr[i]);
-      }
+  // ? Create an empty array to store the strings that are longer than 'num'
+  let result = [];
+
+  // ? Loop through each element in the 'arr' array
+  for (let i = 0; i < arr.length; i++) {
+    // ? Check if the length of the current string (arr[i]) is greater than 'num'
+    if (arr[i].length > num) {
+      // ? If the length is greater, add the current string to the 'result' array
+      result.push(arr[i]);
     }
-  
-    // ? After looping through all the elements in 'arr', return the 'result' array
-    return result;
   }
-  
-  
 
-console.log(stringsLongerThan(["bob", "mark", "cat", "aleks"], 4))
-
-
-// *9. Write a JavaScript function that accepts an argument and returns the type.
-//* Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
-
-
-function checkValue(argument){
-  return typeof argument
+  // ? After looping through all the elements in 'arr', return the 'result' array
+  return result;
 }
 
-console.log(checkValue({}))
-console.log(checkValue(true))
-console.log(checkValue(function(){}))
-console.log(checkValue(3))
-console.log(checkValue(""))
-console.log(checkValue())
+console.log(stringsLongerThan(["bob", "mark", "cat", "aleks"], 4));
+
+// *10. Write a JavaScript function that accepts an argument and returns the type.
+//* Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
+
+function checkValue(argument) {
+  return typeof argument;
+}
+
+console.log(checkValue({}));
+console.log(checkValue(true));
+console.log(checkValue(function () {}));
+console.log(checkValue(3));
+console.log(checkValue(""));
+console.log(checkValue());
+
+//*11. Write a JavaScript function which returns the n rows by n columns identity matrix.
+
+function createIdentityMatrix(n) {
+  let matrix = [];
+
+  for(let i = 0; i < n;i++){
+    let rows = []
+
+    for(let j = 0; j < n; j++){
+     if(i === j){
+      rows.push(1);
+     }else {
+      rows.push(0)
+     }
+    
+     matrix.push(rows)
+    }
+
+    return matrix
+  }
+
+}
+console.log(createIdentityMatrix(4)); 
