@@ -177,3 +177,19 @@ function createIdentityMatrix(n) {
 
 // Print the result of the function
 console.log(createIdentityMatrix(4));
+
+
+//* Write a JavaScript function to get the function name.
+
+function abc(){
+  
+}
+
+
+// Function to get the name of the function
+function getFunctionName(func) {
+  return func.name;
+}
+
+// Testing the function
+console.log(getFunctionName(abc));
