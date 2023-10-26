@@ -179,10 +179,10 @@ function createIdentityMatrix(n) {
 console.log(createIdentityMatrix(4));
 
 
-//* Write a JavaScript function to get the function name.
+//* 12 Write a JavaScript function to get the function name.
 
 function abc(){
-  
+
 }
 
 
