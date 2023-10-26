@@ -263,5 +263,21 @@ console.log(generateHashtag("a".repeat(140)), false, "Too long")
 // All letters will be lowercase and all inputs will be valid.
 
 function high(x){
-  
+
 }
+
+
+// * 15. Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+
+
+// * 16. You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+// Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+// Note: For 4 or more names, the number in "and 2 others" simply increases.
