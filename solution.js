@@ -193,3 +193,75 @@ function getFunctionName(func) {
 
 // Testing the function
 console.log(getFunctionName(abc));
+
+// * 13. The marketing team is spending way too much time typing in hashtags.
+// * Let's help them with our own Hashtag Generator!
+
+//*  Here's the deal:
+
+// It must start with a hashtag (#).
+// All words must have their first letter capitalized.
+// If the final result is longer than 140 chars it must return false.
+// If the input or the result is an empty string it must return false.
+
+function generateHashtag(str) {
+  // final result will be set here
+  let result = "";
+
+  // check if it's an empty string or the length is greater than 140
+  if (str === "" || str.length > 140) {
+    return false;
+  } else {
+    // add hashtag to the beginning of the string
+    let modifiedStr = "#" + str;
+
+    // capitalize the first letter of each word
+    for (let i = 0; i < modifiedStr.length; i++) {
+      if (i === 0 || modifiedStr[i - 1] === " ") {
+        modifiedStr =
+          modifiedStr.substring(0, i) +
+          modifiedStr[i].toUpperCase() +
+          modifiedStr.substring(i + 1);
+      }
+    }
+
+    // trim all the white space in the string
+    modifiedStr = modifiedStr.trim();
+
+    // set the string to result
+    result = modifiedStr;
+
+    // return result
+    return result;
+  }
+}
+
+
+console.log(generateHashtag(""), false, "Expected an empty string to return false")
+console.log(generateHashtag(" ".repeat(200), false, "Still an empty string"))
+console.log(generateHashtag("Do We have A Hashtag"), "#DoWeHaveAHashtag", "Expected a Hashtag (#) at the beginning.")
+console.log(generateHashtag("Codewars"), "#Codewars", "Should handle a single word.")
+console.log(generateHashtag("Codewars Is Nice"), "#CodewarsIsNice", "Should remove spaces.")
+console.log(generateHashtag(("Codewars is nice"), "#CodewarsIsNice", "Should capitalize first letters of words."))
+console.log(generateHashtag("code" + " ".repeat(140) + "wars"), "#CodeWars")
+console.log(generateHashtag("Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Cat"), false, "Should return false if the final word is longer than 140 chars.")
+console.log(generateHashtag("a".repeat(139)), "#A" + "a".repeat(138), "Should work")
+console.log(generateHashtag("a".repeat(140)), false, "Too long")
+
+
+
+//* 14. Given a string of words, you need to find the highest scoring word.
+
+// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+
+// For example, the score of abad is 8 (1 + 2 + 1 + 4).
+
+// You need to return the highest scoring word as a string.
+
+// If two words score the same, return the word that appears earliest in the original string.
+
+// All letters will be lowercase and all inputs will be valid.
+
+function high(x){
+  
+}
