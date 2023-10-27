@@ -269,6 +269,25 @@ function high(x){
 
 // * 15. Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
+function reverseWords(str) {
+  let words = str.split(' ');
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length >= 5) {
+      words[i] = words[i].split('').reverse().join('');
+    }
+  }
+
+  return words.join(' ');
+}
+
+
+console.log(reverseWords("Welcome")); 
+console.log(reverseWords("Hey fellow warriors"));
+console.log(reverseWords("This is a test")); 
+console.log(reverseWords("This is another test"));
+console.log(reverseWords("Coding is fun")); 
+
 
 
 // * 16. You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
@@ -281,3 +300,4 @@ function high(x){
 // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 // Note: For 4 or more names, the number in "and 2 others" simply increases.
+
