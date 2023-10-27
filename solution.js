@@ -252,20 +252,53 @@ console.log(generateHashtag("a".repeat(140)), false, "Too long")
 
 //* 14. Given a string of words, you need to find the highest scoring word.
 
-// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+//* Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
 
-// For example, the score of abad is 8 (1 + 2 + 1 + 4).
+//* For example, the score of abad is 8 (1 + 2 + 1 + 4).
 
-// You need to return the highest scoring word as a string.
+//* You need to return the highest scoring word as a string.
 
-// If two words score the same, return the word that appears earliest in the original string.
+//* If two words score the same, return the word that appears earliest in the original string.
 
-// All letters will be lowercase and all inputs will be valid.
+//* All letters will be lowercase and all inputs will be valid.
 
-function high(x){
 
+//?----------------------------------------------
+
+// Define the function high that takes a string x as an argument
+function high(x) {
+  // Split the string x into an array of words using space as the delimiter and store it in the variable words
+  const words = x.split(' ');
+  // Initialize variables highestWord and highestScore to keep track of the word with the highest score and its score
+  let highestWord = '';
+  let highestScore = 0;
+
+  // Iterate through each word in the words array
+  for (let i = 0; i < words.length; i++) {
+    // Initialize the currentScore variable to keep track of the score of the current word
+    let currentScore = 0;
+    // Iterate through each character in the current word
+    for (let j = 0; j < words[i].length; j++) {
+      // Calculate the score of the current character and add it to the currentScore
+      currentScore += words[i].charCodeAt(j) - 96;
+    }
+    // Check if the currentScore is greater than the highestScore
+    // If it is, update the highestScore and highestWord to the current score and word
+    if (currentScore > highestScore) {
+      highestScore = currentScore;
+      highestWord = words[i];
+    }
+  }
+  // Return the word with the highest score along with the score itself
+  return highestWord + " " + highestScore;
 }
 
+
+console.log(high("aaa bbb ccc")); 
+console.log(high("zodiac zone")); 
+console.log(high("hello world")); 
+console.log(high("alphabet soup")); 
+console.log(high("programming is fun"));
 
 // * 15. Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
