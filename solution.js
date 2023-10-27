@@ -334,3 +334,13 @@ console.log(reverseWords("Coding is fun"));
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 // Note: For 4 or more names, the number in "and 2 others" simply increases.
 
+function nameOfPeople(array){
+  
+}
+
+console.log(nameOfPeople([])); 
+console.log(nameOfPeople(["Peter"])); 
+console.log(nameOfPeople(["Jacob", "Alex"])); 
+console.log(nameOfPeople(["Max", "John", "Mark"]));
+console.log(nameOfPeople(["Alex", "Jacob", "Mark", "Max"])); 
+console.log(nameOfPeople(["Alex", "Jacob", "Mark", "Max", "Sarah"])); 
