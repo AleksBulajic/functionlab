@@ -263,9 +263,6 @@ console.log(generateHashtag("a".repeat(140)), false, "Too long")
 //* All letters will be lowercase and all inputs will be valid.
 
 
-//?----------------------------------------------
-
-// Define the function high that takes a string x as an argument
 function high(x) {
   // Split the string x into an array of words using space as the delimiter and store it in the variable words
   const words = x.split(' ');
