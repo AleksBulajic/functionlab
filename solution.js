@@ -286,7 +286,7 @@ function high(x) {
       highestWord = words[i];
     }
   }
-  // Return the word with the highest score along with the score itself
+  // Return the word with the highest word along with the score itself
   return highestWord + " " + highestScore;
 }
 
@@ -300,14 +300,17 @@ console.log(high("programming is fun"));
 // * 15. Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
 function reverseWords(str) {
+  // initiated a variable to split the string into and aray of words
   let words = str.split(' ');
-
+// initiated a loop that checks the lenght of each word
   for (let i = 0; i < words.length; i++) {
+// if condition that checks if a word is 5 or longer 
     if (words[i].length >= 5) {
+    // if the word is 5 or longer it will split the word into an array of characters revers the letters and then join it back together
       words[i] = words[i].split('').reverse().join('');
     }
   }
-
+//return the words and join it all in a string again
   return words.join(' ');
 }
 
