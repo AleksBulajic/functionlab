@@ -336,7 +336,7 @@ console.log(reverseWords("Coding is fun"));
 
 function nameOfPeople(names) {
 if(names.length === 0){
-  return "no one likes this."
+  return "no one likes this."  
 }else if(names.length === 1){
   return `${names[0]}   likes this.`
 }else if(names.length === 2){
